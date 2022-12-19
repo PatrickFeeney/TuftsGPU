@@ -22,4 +22,4 @@ if __name__ == "__main__":
     sbatch_flags = config_to_sbatch_flags(args.config_path)
     launch_cmd = config_to_launch_cmd(args.config_path)
     cmd = f"sbatch {sbatch_flags} --wrap \"{launch_cmd}\""
-    subprocess.run(cmd)
+    subprocess.run(cmd, shell=True)

@@ -26,4 +26,4 @@ if __name__ == "__main__":
     flag_strs = search_to_flags(args.search_path)
     for flag_str in flag_strs:
         cmd = f"sbatch {sbatch_flags} --wrap \"{launch_cmd} {flag_str}\""
-        subprocess.run(f"{cmd} {flag_str}")
+        subprocess.run(f"{cmd} {flag_str}", shell=True)

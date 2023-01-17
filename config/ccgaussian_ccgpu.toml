@@ -1,7 +1,7 @@
 launch_cmd = "cd /cluster/home/pfeene01/CCGaussian; nvidia-smi; pipenv run python ccgaussian/train_ndcc.py"
 
 [sbatch]
--p = "ccgpu"
+-p = "gpu"
 -t = "0-2:0:0"
 --gres = "gpu:a100:1"
 -c = 10

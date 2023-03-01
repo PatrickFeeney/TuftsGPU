@@ -22,7 +22,7 @@ def parse_args(is_search=False):
     if is_search:
         parser.add_argument("search_path")
     parser.add_argument("-no_label", action="store_true",
-                        help="Disable automatic '-label [search]_[search #]' launch flag")
+                        help="Disable automatic '--label [search]_[search #]' launch flag")
     return parser.parse_args()
 
 
@@ -31,6 +31,6 @@ if __name__ == "__main__":
     sbatch_flags = config_to_sbatch_flags(args.config_path)
     launch_cmd = config_to_launch_cmd(args.config_path)
     if not args.no_label:
-        launch_cmd += f" -label {Path(args.config_path).stem}"
+        launch_cmd += f" --label {Path(args.config_path).stem}"
     cmd = f"sbatch {sbatch_flags} --wrap \"{launch_cmd}\""
     subprocess.run(cmd, shell=True)

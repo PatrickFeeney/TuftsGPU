@@ -1,0 +1,8 @@
+--lr_e = [0.000001]
+--lr_c = [0.001]
+--init_var = [50.0]
+--end_var = [1.0]
+--w_nll = [0.0]
+--w_unlab = [1.0]
+--var_warmup = [50]
+--num_epochs = [50]

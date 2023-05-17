@@ -1,0 +1,5 @@
+--lr_e = [1e-5]
+--lr_c = [1e-2]
+--num_epochs = [50, 100]
+--batch_size = [128]
+--dataset_name = ["cub"]
